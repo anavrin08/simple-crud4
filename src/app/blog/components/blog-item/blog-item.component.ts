@@ -18,6 +18,7 @@ export class BlogItemComponent implements OnInit {
 
   sendBlogIDandEdit(){
     console.log("Edit Blog: " + this.blogsArray?.id)
+    this.router.navigate(['book/form'])
   }
 
   sendBlogIDandDelete(){

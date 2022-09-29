@@ -3,17 +3,16 @@
 <div class="center">
     <form [formGroup]="profile" (ngSubmit)="submitProfile()">
         <div [hidden]="profile.valid" class="form-group">
-            Please fill in required fields.
+            Please fill in required fields *
         </div>
         <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email *</label>
             <input type="text" formControlName="email" placeholder="Email"
                 class="form-control" required email>
         </div>
         <div class="form-group">
-            <label for="name">Name</label>
-            <input  type="text" formControlName="name" placeholder="Name" class="form-control"
-                required>
+            <label for="name">Name *</label>
+            <input  type="text" formControlName="name" placeholder="Name" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="bio">Bio</label>

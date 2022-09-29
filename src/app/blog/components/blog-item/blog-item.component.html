@@ -3,7 +3,11 @@
     <div class="details">Title: {{blogsArray?.title}}</div>
     <div class="details">Description: {{blogsArray?.description}}</div>
     <div class="details">Author: {{blogsArray?.author}}</div>
-    <div class="details">Comment/s: {{blogsArray?.comments}}</div>
+    <br>
+    <div class="details">Comment/s:</div>  
+    <div class="details" *ngFor="let comment of blogsArray?.comments">
+        <mat-icon> comment</mat-icon> {{comment}}
+    </div>
 
     <button class="btn" (click)="sendBlogIDandEdit()">Edit</button>
     <button class="btn" (click)="sendBlogIDandDelete()">Delete</button>

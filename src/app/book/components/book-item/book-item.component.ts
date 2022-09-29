@@ -27,7 +27,6 @@ export class BookItemComponent implements OnInit {
   sendBookIDandDelete(){
     console.log("Delete Book: " + this.booksArray?.id) 
     this.BookIDDeleteEmitter.emit(this.booksArray?.id)
-    this.router.navigate(['book/form'])
   }
 
 }

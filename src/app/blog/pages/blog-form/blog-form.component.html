@@ -1,26 +1,26 @@
 <h1>Blog Form</h1>
 <form class="center" [formGroup]="blogForm" (ngSubmit)="submitBlog()"> 
     <div [hidden]="blogForm.valid" class="form-group">
-        Please fill in required fields. 
+        Please fill in required fields * 
     </div>
 
     <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Title *</label>
         <input type="text" formControlName="title" placeholder="Title" class="form-control" required> 
     </div>
 
     <div class="form-group"> 
-        <label for="description">Description</label>
+        <label for="description">Description *</label>
         <input type="text" formControlName="description" placeholder="Description" class="form-control" required>
     </div>
 
     <div class="form-group"> 
-        <label for="author">Author</label>
+        <label for="author">Author *</label>
         <input type="text" formControlName="author" placeholder="Author" class="form-control" required>
     </div>
 
     <div class="form-group" formArrayName="comments"> 
-        <label for="comments">Comment/s</label>
+        <label for="comments">Comment/s *</label>
         <div *ngFor="let comment of comments.controls; let i=index">
              <div class="index" [formGroupName]="i">
                 <input type="text" formControlName="comment" placeholder="Comment #{{i+1}}" class="form-control" required>

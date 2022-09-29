@@ -1,7 +1,10 @@
 <div class="container">
     <div class="number">Book item # {{booksArray?.id}}</div>
     <div class="details">Name: {{booksArray?.name}}</div>
-    <div class="details">Author/s: {{booksArray?.authors}}</div>
+    <div class="details">Author/s:</div>
+    <div class="details" *ngFor="let author of booksArray?.authors">
+        <mat-icon> person_pin_circle</mat-icon> {{author}}
+    </div>
     <div class="details">ISBN: {{booksArray?.isbn}}</div>
 
     <button class="btn" (click)="sendBookIDandEdit()">Edit</button>

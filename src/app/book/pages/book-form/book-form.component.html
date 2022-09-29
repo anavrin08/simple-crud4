@@ -4,16 +4,16 @@
     (BookIDDeleteEmitter)="deleteBook($event)">
 
     <div [hidden]="bookForm.valid" class="form-group">
-        Please fill in required fields. 
+        Please fill in required fields *
     </div>
 
     <div class="form-group">
-        <label for="name">Name</label>
+        <label for="name">Name *</label>
         <input type="text" formControlName="name" placeholder="Name" class="form-control" required>
     </div>
 
     <div class="form-group" formArrayName="authors">
-        <label for="authors">Author/s</label>
+        <label for="authors">Author/s *</label>
         <div *ngFor="let author of authors.controls; let i=index">
             <div class="index" [formGroupName]="i">
                 <input type="text" formControlName="author" placeholder="Author #{{i+1}}" class="form-control" required>
@@ -26,8 +26,8 @@
     </div>
 
     <div class="form-group">
-        <label for="isbn">ISBN</label>
-        <input type="text" formControlName="isbn" placeholder="ISBN" class="form-control" required>
+        <label for="isbn">ISBN *</label>
+        <input type="text" formControlName="isbn" placeholder="Must be exactly 9 digits" class="form-control" required minlength="9" maxlength="9">
     </div>
 
     <div  class="form-btn">

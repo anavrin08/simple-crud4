@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="number">Book item # {{booksArray?.id}}</div>
+    <div class="details">Name: {{booksArray?.name}}</div>
+    <div class="details">Author/s: {{booksArray?.authors}}</div>
+    <div class="details">ISBN: {{booksArray?.isbn}}</div>
+
+    <button class="btn" (click)="sendBookIDandEdit()">Edit</button>
+    <button class="btn" (click)="sendBookIDandDelete()">Delete</button>
+</div> 

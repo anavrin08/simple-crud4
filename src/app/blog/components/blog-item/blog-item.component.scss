@@ -1,0 +1,32 @@
+.container {
+    text-align: center;
+    margin: 10px auto 10px auto;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.number { 
+    color: #f7d6e7; 
+    font-family: 'Raleway',sans-serif; 
+    font-size: 25px; 
+    font-weight: 800;  
+    text-align: center;
+    margin-bottom: 20px; 
+    
+    text-transform: uppercase; 
+}
+
+.details {
+    color:#f7d6e7;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.btn {
+    background-color: #b91456 ;
+    color: #f7d6e7;
+    margin: 10px 5px 0 5px;
+    font-size: medium;
+}

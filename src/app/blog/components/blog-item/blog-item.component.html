@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="number">Blog item # {{blogsArray?.id}}</div>
+    <div class="details">Title: {{blogsArray?.title}}</div>
+    <div class="details">Description: {{blogsArray?.description}}</div>
+    <div class="details">Author: {{blogsArray?.author}}</div>
+    <div class="details">Comment/s: {{blogsArray?.comments}}</div>
+
+    <button class="btn" (click)="sendBlogIDandEdit()">Edit</button>
+    <button class="btn" (click)="sendBlogIDandDelete()">Delete</button>
+</div> 

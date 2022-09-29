@@ -1,0 +1,5 @@
+<h1>Blog List</h1>
+<app-command-bar></app-command-bar>
+<div class="item" *ngFor="let blogs of blogsArray">
+    <app-blog-item [blogsArray]="blogs"></app-blog-item>
+</div>

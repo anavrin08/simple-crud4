@@ -1,0 +1,38 @@
+<h1>Book Form</h1>
+<form class="center" [formGroup]="bookForm" (ngSubmit)="submitBook()" 
+    (BookIDEditEmitter)="editBook($event)" 
+    (BookIDDeleteEmitter)="deleteBook($event)">
+
+    <div [hidden]="bookForm.valid" class="form-group">
+        Please fill in required fields. 
+    </div>
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" formControlName="name" placeholder="Name" class="form-control" required>
+    </div>
+
+    <div class="form-group" formArrayName="authors">
+        <label for="authors">Author/s</label>
+        <div *ngFor="let author of authors.controls; let i=index">
+            <div class="index" [formGroupName]="i">
+                <input type="text" formControlName="author" placeholder="Author #{{i+1}}" class="form-control" required>
+                <button type="submit" class="btn" (click)="removeAuthor(i)"><mat-icon>delete_forever</mat-icon></button>
+            </div>
+        </div>
+        <div class="form-btn">
+            <button type="submit" class="btn" (click)="addAuthor()">Add Author</button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="isbn">ISBN</label>
+        <input type="text" formControlName="isbn" placeholder="ISBN" class="form-control" required>
+    </div>
+
+    <div  class="form-btn">
+        <button class="btn" type="submit" [disabled]="bookForm.invalid" class="btn">Submit</button>
+    </div>
+
+</form>
+

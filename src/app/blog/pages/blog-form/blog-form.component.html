@@ -1,0 +1,40 @@
+<h1>Blog Form</h1>
+<form class="center" [formGroup]="blogForm" (ngSubmit)="submitBlog()"> 
+    <div [hidden]="blogForm.valid" class="form-group">
+        Please fill in required fields. 
+    </div>
+
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" formControlName="title" placeholder="Title" class="form-control" required> 
+    </div>
+
+    <div class="form-group"> 
+        <label for="description">Description</label>
+        <input type="text" formControlName="description" placeholder="Description" class="form-control" required>
+    </div>
+
+    <div class="form-group"> 
+        <label for="author">Author</label>
+        <input type="text" formControlName="author" placeholder="Author" class="form-control" required>
+    </div>
+
+    <div class="form-group" formArrayName="comments"> 
+        <label for="comments">Comment/s</label>
+        <div *ngFor="let comment of comments.controls; let i=index">
+             <div class="index" [formGroupName]="i">
+                <input type="text" formControlName="comment" placeholder="Comment #{{i+1}}" class="form-control" required>
+                <button type="submit" class="btn" (click)="removeComment(i)"><mat-icon>delete_forever</mat-icon></button>
+            </div>
+        </div>
+        <div class="form-btn">
+            <button type="submit" class="btn" (click)="addComment()">Add Comment</button>
+        </div>
+    </div>
+
+    <div class="form-btn">
+        <button class="btn" type="submit" [disabled]="blogForm.invalid"  class="btn">Submit</button>
+    </div>
+
+</form>
+

@@ -1,0 +1,44 @@
+.ng-valid[required], .ng-valid.required {
+    border-left: 7px solid green;
+}
+
+.ng-invalid[required], .ng-invalid.required {
+    border-left: 7px solid red;
+}
+
+h1 { 
+    color: #12485a; 
+    font-family: 'Raleway',sans-serif; 
+    font-size: 62px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 10px auto 10px auto; 
+    text-align: center; 
+    text-transform: uppercase; 
+}
+
+.center{
+    background-color:#12485a;
+    margin: 10px auto 10px auto; 
+    max-width: 500px;
+    padding: 10px;
+}
+
+.btn {
+    background-color: #b91456 ;
+    color: #f7d6e7;
+    font-size: medium;
+}
+
+.form-group{
+    color:#f7d6e7;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: medium;
+    padding: 10px;
+}
+
+.form-btn{
+    text-align: center;
+    padding: 10px;
+}

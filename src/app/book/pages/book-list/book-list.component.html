@@ -1,0 +1,6 @@
+<h1>Book List</h1>
+<app-command-bar></app-command-bar>
+<div class="item" *ngFor="let books of booksArray">
+  <app-book-item [booksArray]="books"></app-book-item>
+</div> 
+

@@ -17,11 +17,11 @@ export class BlogItemComponent implements OnInit {
   }
 
   sendBlogIDandEdit(){
-    console.log("Edit Blog: " + this.blogsArray?.id)
-    this.router.navigate(['book/form'])
+    alert("Edit Blog: " + this.blogsArray?.title)
+    this.router.navigate(['blog/form'])
   }
 
   sendBlogIDandDelete(){
-    console.log("Delete Blog: " + this.blogsArray?.id)  
+    alert("Are you sure to delete '" + this.blogsArray?.title + "'")  
   }
 }

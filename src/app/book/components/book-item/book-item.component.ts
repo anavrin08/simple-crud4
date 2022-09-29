@@ -19,13 +19,12 @@ export class BookItemComponent implements OnInit {
   }
 
   sendBookIDandEdit(){
-    console.log("Edit Book: " + this.booksArray?.id)
-    this.BookIDEditEmitter.emit(this.booksArray?.id)
+    alert("Edit Blog: " + this.booksArray?.name)
     this.router.navigate(['book/form'])
   }
 
   sendBookIDandDelete(){
-    console.log("Delete Book: " + this.booksArray?.id) 
+    alert("Are you sure to delete '" + this.booksArray?.name + "'") 
     this.BookIDDeleteEmitter.emit(this.booksArray?.id)
   }
 

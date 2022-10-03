@@ -8,6 +8,7 @@ import { BookFormComponent } from './pages/book-form/book-form.component';
 import { SharedModule } from '../shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {MatIconModule} from '@angular/material/icon';
     BookRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule
   ]
 })
 export class BookModule { }

@@ -1,0 +1,70 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "name": "Book1",
+            "authors": [
+                "Author A",
+                "Author B",
+                "Author C"
+            ],
+            "isbn": "111111111"
+        },
+        {
+            "id": 2,
+            "name": "Book2",
+            "authors": [
+                "Author D",
+                "Author E",
+                "Author F"
+            ],
+            "isbn": "222222222"
+        },
+        {
+            "id": 3,
+            "name": "Book3",
+            "authors": [
+                "Author G",
+                "Author H",
+                "Author I"
+            ],
+            "isbn": "222222222"
+        }
+    ],
+
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Title A",
+            "description": "Desc A",
+            "author": "Author A",
+            "comments": [
+                "Comment 1",
+                "Comment 2",
+                "Comment 3"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Title B",
+            "description": "Desc B",
+            "author": "Author B",
+            "comments": [
+                "Comment 4",
+                "Comment 5",
+                "Comment 6"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Title C",
+            "description": "Desc C",
+            "author": "Author C",
+            "comments": [
+                "Comment 7",
+                "Comment 8",
+                "Comment 9"
+            ]
+        }
+    ]
+}

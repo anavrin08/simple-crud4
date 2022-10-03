@@ -3,7 +3,7 @@
     (BookIDEditEmitter)="editBook($event)" 
     (BookIDDeleteEmitter)="deleteBook($event)">
 
-    <div [hidden]="bookForm.valid" class="form-group">
+    <div [hidden]="bookForm.valid && bookForm.dirty" class="form-group">
         Please fill in required fields *
     </div>
 
@@ -24,14 +24,14 @@
             <button type="submit" class="btn" (click)="addAuthor()">Add Author</button>
         </div>
     </div>
-
+    
     <div class="form-group">
         <label for="isbn">ISBN *</label>
         <input type="text" formControlName="isbn" placeholder="Must be exactly 9 digits" class="form-control" required minlength="9" maxlength="9">
     </div>
 
     <div  class="form-btn">
-        <button class="btn" type="submit" [disabled]="bookForm.invalid" class="btn">Submit</button>
+        <button class="btn" type="submit" [disabled]="bookForm.invalid">Submit</button>
     </div>
 
 </form>

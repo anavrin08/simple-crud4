@@ -2,7 +2,7 @@
 
 <div class="center">
     <form [formGroup]="profile" (ngSubmit)="submitProfile()">
-        <div [hidden]="profile.valid" class="form-group">
+        <div [hidden]="profile.valid && profile.dirty" class="form-group">
             Please fill in required fields *
         </div>
         <div class="form-group">

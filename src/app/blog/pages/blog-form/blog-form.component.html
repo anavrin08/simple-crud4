@@ -1,6 +1,6 @@
 <h1>Blog Form</h1>
 <form class="center" [formGroup]="blogForm" (ngSubmit)="submitBlog()"> 
-    <div [hidden]="blogForm.valid" class="form-group">
+    <div [hidden]="blogForm.valid && blogForm.dirty" class="form-group">
         Please fill in required fields * 
     </div>
 
@@ -11,7 +11,7 @@
 
     <div class="form-group"> 
         <label for="description">Description *</label>
-        <input type="text" formControlName="description" placeholder="Description" class="form-control" required>
+        <textarea rows="3" formControlName="description" placeholder="Description" class="form-control" required></textarea>
     </div>
 
     <div class="form-group"> 
@@ -23,7 +23,7 @@
         <label for="comments">Comment/s *</label>
         <div *ngFor="let comment of comments.controls; let i=index">
              <div class="index" [formGroupName]="i">
-                <input type="text" formControlName="comment" placeholder="Comment #{{i+1}}" class="form-control" required>
+                <textarea  rows="3" formControlName="comment" placeholder="Comment #{{i+1}}" class="form-control" required></textarea>
                 <button type="submit" class="btn" (click)="removeComment(i)"><mat-icon>delete_forever</mat-icon></button>
             </div>
         </div>

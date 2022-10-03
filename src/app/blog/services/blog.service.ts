@@ -37,4 +37,8 @@ export class BlogService {
   displayBlogs(){
     return this.blogsArray;
   }
+
+  getBook(id: number) {
+    return this.blogsArray[id];
+  }
 }

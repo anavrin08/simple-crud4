@@ -36,4 +36,9 @@ export class BookService {
   displayBook() {
     return this.booksArray;
   }
+
+  getBook(id: number) {
+    return this.booksArray[id];
+  }
+  
 }
